@@ -1,0 +1,4 @@
+name = "Custom Token Features"
+description = "Provides feature management for Custom token."
+core = 7.x
+package = "Features"

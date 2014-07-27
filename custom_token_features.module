@@ -1,0 +1,25 @@
+<?php
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Implementation of hook_features_api
+ *
+ * Here we define the components that we want to make exportable.  For this
+ * particular module, we want to make the configurations exportable.
+ */
+function custom_token_features_features_api() {
+	
+  return array(
+    'fe_custom_token_config' => array(
+      'name' => 'Custom token features ',
+      'file' => drupal_get_path('module', 'custom_token_features') . '/custom_token_features.inc',
+      'default_hook' => 'fe_custom_token_config_features_default_settings',
+      'feature_source' => TRUE,
+    ),
+  );
+}
